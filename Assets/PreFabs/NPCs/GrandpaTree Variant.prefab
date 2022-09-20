@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6740469120843856442
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7413218552555362227, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218552555362227, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218552555362228, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9e335a1b6e141f84589f490509418ebf, type: 3}
+    - target: {fileID: 7413218552816808261, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218552816808261, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218552816808262, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276407, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_Name
+      value: GrandpaTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276409, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_Size.x
+      value: 4.086055
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276409, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_Size.y
+      value: 6.655056
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276409, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.18721008
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276409, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.54380226
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276410, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276410, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.35933685
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276410, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.014351
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276410, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.791043
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276410, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276410, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276410, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276410, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276410, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276410, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276410, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276412, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_Size.x
+      value: 4.1217146
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276412, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_Size.y
+      value: 6.637226
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276412, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.18721008
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276412, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.5348873
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276413, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: isQuestGiver
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276413, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: sentences.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276413, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: talkSprites.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276413, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: sentences.Array.data[0]
+      value: "Hello young Leaflie, I take it this is your first Autumn. The forest
+        is ready to begin slumber but it\u2019s our job to help it rest. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276413, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: sentences.Array.data[1]
+      value: "Hello young Leaflie, I take it this is your first Autumn. The forest
+        is ready to begin slumber but it\u2019s our job to help it rest. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276413, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: sentences.Array.data[2]
+      value: ' Take for example these trees, they have yet to let their leaves fall.
+        Give them a little encouragement by signing and using the [1][1][1] song
+        to persuade them. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276413, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: sentences.Array.data[3]
+      value: 'There are x amount of trees that need your help in the forest along
+        with many of your siblings and forest critters. Help them all and the forest
+        will be ready to slumber. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276413, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: talkSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2ec9464a7933c2b4798dbdddffb7804c, type: 3}
+    - target: {fileID: 7413218553928276413, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: questCompleteSentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276413, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: questCompleteSentences.Array.data[0]
+      value: ' Wonderful job my dear spirit, but it seems that the forest still yearns
+        for more help, seek out those in need.  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218553928276413, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: questCompleteSentences.Array.data[1]
+      value: ' Wonderful job my dear spirit, but it seems that the forest still yearns
+        for more help, seek out those in need.  '
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}

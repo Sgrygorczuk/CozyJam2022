@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,7 +13,22 @@ public class GameFlow : MonoBehaviour
     private PlayerTalk _playerTalk;
     private Animator _fadeAnimator;      //Allows us to fade in and out 
     private GameObject _gameCanvas;
-    
+    private GameObject _popUp;
+    private TextMeshProUGUI _popUpText;
+
+        private enum Quests
+    {
+        Tree, 
+        Flowers,
+        Acorns,
+        Berries,
+        Pumpkins,
+        BearPumpkin,
+    }
+
+    private List<NPC> _npcs = new List<NPC>();
+    private int[] _scores = new int[10];
+
     //===== Game Flow 
     private enum GameState             
     {
@@ -35,6 +52,15 @@ public class GameFlow : MonoBehaviour
         _playerTalk = GameObject.Find($"Player").GetComponent<PlayerTalk>();
         _playerWalk = GameObject.Find($"Player").GetComponent<PlayerWalk>();
         _gameCanvas = GameObject.Find("GameCanvas");
+        _popUp = GameObject.Find("GameCanvas").transform.Find("PopUp").gameObject;
+        _popUpText = _popUp.transform.Find("PopUpText").GetComponent<TextMeshProUGUI>();
+        AddNPC();
+    }
+
+    private void AddNPC()
+    {
+        var NPCs = GameObject.Find("NPCs");
+        _npcs.Add(NPCs.transform.Find("GrandpaTree").GetComponent<NPC>());
     }
 
     // Update is called once per frame
@@ -117,4 +143,25 @@ public class GameFlow : MonoBehaviour
         yield return new WaitForSeconds(0.95f);
         SceneManager.LoadScene($"TBC");
     }
+
+    public void AddTree()
+    {
+        _scores[(int) Quests.Tree]++;
+        if (_scores[(int)Quests.Tree] == 2)
+        {
+            _npcs[(int)Quests.Tree].QuestComplete();
+        }
+        var text = "Leaves shaken of trees " + _scores[(int)Quests.Tree] + "/" + "15";
+        StartCoroutine(PopUp(text));
+    }
+
+    private IEnumerator PopUp(string text)
+    {
+        _popUpText.text = text;
+        _popUp.SetActive(true);
+        yield return new WaitForSeconds(3);
+        _popUp.SetActive(false);
+    }
+    
+    
 }

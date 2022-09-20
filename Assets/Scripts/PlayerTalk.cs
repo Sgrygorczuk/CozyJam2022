@@ -57,28 +57,38 @@ public class PlayerTalk : MonoBehaviour
     // Update is called once per frame
     public void UpdateTalk()
     {
-        if (_talkQueue.Count == 3)
+        if (_playerTalkResult.GetIsTransformed())
         {
-            FullMove();
-            return;
+            if ((Input.GetButtonDown($"Sound1") || (Input.GetButtonDown($"Sound2")) || (Input.GetButtonDown($"Sound2"))))
+            {
+                _playerTalkResult.PlayerAction(12);
+            }
         }
+        else
+        {
+            if (_talkQueue.Count == 3)
+            {
+                FullMove();
+                return;
+            }
         
-        if (Input.GetButtonDown($"Sound1") && !_hasPlayed)
-        {
-            Action(0);
-        }
+            if (Input.GetButtonDown($"Sound1") && !_hasPlayed)
+            {
+                Action(0);
+            }
         
-        if (Input.GetButtonDown($"Sound2") && !_hasPlayed)
-        {
-            Action(1);
-        }
+            if (Input.GetButtonDown($"Sound2") && !_hasPlayed)
+            {
+                Action(1);
+            }
         
-        if (Input.GetButtonDown($"Sound3") && !_hasPlayed)
-        {
-            Action(2);
-        }
+            if (Input.GetButtonDown($"Sound3") && !_hasPlayed)
+            {
+                Action(2);
+            }
 
-        UpdatingQueueCountDown();
+            UpdatingQueueCountDown();   
+        }
     }
 
     private void FullMove()

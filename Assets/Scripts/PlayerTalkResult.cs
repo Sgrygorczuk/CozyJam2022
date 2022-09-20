@@ -9,6 +9,7 @@ public class PlayerTalkResult : MonoBehaviour
     private static bool _isHoldingItem;
     private SpriteRenderer _spriteRenderer;
     private int _result;
+    private bool _isTransformed; 
 
     private void Start()
     {
@@ -24,6 +25,11 @@ public class PlayerTalkResult : MonoBehaviour
             case 4:
                 DropItem();
                 break;
+            case 12:
+            {
+                Transform();
+                break;
+            }
         }
     }
     
@@ -39,18 +45,6 @@ public class PlayerTalkResult : MonoBehaviour
         
     }
 
-    //Result = 2
-    public void TakeItemFromPerson()
-    {
-        
-    }
-
-    //Result = 3
-    public void BeRude()
-    {
-        
-    }
-    
     //Result = 4
     private void DropItem()
     {
@@ -77,17 +71,16 @@ public class PlayerTalkResult : MonoBehaviour
         _isHoldingItem = true;
         _spriteRenderer.enabled = true;
     }
-    
-    //Result 9
-    public void BeNice()
-    {
-        
-    }
-    
+
     //Result 12
-    private void IDK()
+    private void Transform()
     {
-        
+        _isTransformed = !_isTransformed;
+    }
+
+    public bool GetIsTransformed()
+    {
+        return _isTransformed;
     }
 
     //Result 18
@@ -108,11 +101,5 @@ public class PlayerTalkResult : MonoBehaviour
             _isHoldingItem = false;
             _spriteRenderer.enabled = false;
         }
-    }
-
-    //Result = 27
-    public void Talk()
-    {
-        
     }
 }

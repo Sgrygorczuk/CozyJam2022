@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PickUpObject : MonoBehaviour
 {
-
     [SerializeField] private string itemName = "Name";
     private SpriteRenderer _spriteRenderer;
     
@@ -22,6 +21,11 @@ public class PickUpObject : MonoBehaviour
         _spriteRenderer.sprite = sprite;
     }
 
+    public string GetName()
+    {
+        return itemName;
+    }
+    
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Player") && col.transform.parent.GetComponent<PlayerTalkResult>().GetResult() == 8)

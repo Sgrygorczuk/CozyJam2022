@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6840409864643929863
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3714284438670322306, guid: 9f4f70322e66756428b82a4d5dd122c8, type: 3}
+      propertyPath: m_Name
+      value: Berry Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714284438670322306, guid: 9f4f70322e66756428b82a4d5dd122c8, type: 3}
+      propertyPath: m_TagString
+      value: PickUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714284438670322309, guid: 9f4f70322e66756428b82a4d5dd122c8, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714284438670322309, guid: 9f4f70322e66756428b82a4d5dd122c8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714284438670322309, guid: 9f4f70322e66756428b82a4d5dd122c8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714284438670322309, guid: 9f4f70322e66756428b82a4d5dd122c8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714284438670322309, guid: 9f4f70322e66756428b82a4d5dd122c8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714284438670322309, guid: 9f4f70322e66756428b82a4d5dd122c8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714284438670322309, guid: 9f4f70322e66756428b82a4d5dd122c8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714284438670322309, guid: 9f4f70322e66756428b82a4d5dd122c8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714284438670322309, guid: 9f4f70322e66756428b82a4d5dd122c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714284438670322309, guid: 9f4f70322e66756428b82a4d5dd122c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714284438670322309, guid: 9f4f70322e66756428b82a4d5dd122c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714284438670322310, guid: 9f4f70322e66756428b82a4d5dd122c8, type: 3}
+      propertyPath: itemName
+      value: Berry
+      objectReference: {fileID: 0}
+    - target: {fileID: 5842044264144092899, guid: 9f4f70322e66756428b82a4d5dd122c8, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3714284438670322307, guid: 9f4f70322e66756428b82a4d5dd122c8, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 9f4f70322e66756428b82a4d5dd122c8, type: 3}
+--- !u!1 &7882933785717198213 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3714284438670322306, guid: 9f4f70322e66756428b82a4d5dd122c8, type: 3}
+  m_PrefabInstance: {fileID: 6840409864643929863}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &6182600102854691070
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7882933785717198213}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.41, y: -1.33}
+  serializedVersion: 2
+  m_Radius: 2.19

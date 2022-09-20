@@ -40,7 +40,7 @@ public class TalkController : MonoBehaviour
     //Allows player continue forward in the conversation 
     public void TalkUpdate()
     {
-        if (!Input.GetButtonDown("Fire1")) return;
+        if (!Input.GetButtonDown($"Sound1") && !Input.GetButtonDown($"Sound2") && !Input.GetButtonDown($"Sound3")) return;
         PlayAudio();
         //If we reached the end exit out of the talking bit 
         if (Done())
