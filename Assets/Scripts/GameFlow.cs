@@ -26,7 +26,7 @@ public class GameFlow : MonoBehaviour
         BearPumpkin,
     }
 
-    private List<NPC> _npcs = new List<NPC>();
+    [SerializeField] private List<NPC> npcs = new List<NPC>();
     private int[] _scores = new int[10];
 
     //===== Game Flow 
@@ -54,13 +54,6 @@ public class GameFlow : MonoBehaviour
         _gameCanvas = GameObject.Find("GameCanvas");
         _popUp = GameObject.Find("GameCanvas").transform.Find("PopUp").gameObject;
         _popUpText = _popUp.transform.Find("PopUpText").GetComponent<TextMeshProUGUI>();
-        AddNPC();
-    }
-
-    private void AddNPC()
-    {
-        var NPCs = GameObject.Find("NPCs");
-        _npcs.Add(NPCs.transform.Find("GrandpaTree").GetComponent<NPC>());
     }
 
     // Update is called once per frame
@@ -147,14 +140,69 @@ public class GameFlow : MonoBehaviour
     public void AddTree()
     {
         _scores[(int) Quests.Tree]++;
-        if (_scores[(int)Quests.Tree] == 2)
+        if (_scores[(int)Quests.Tree] == 13)
         {
-            _npcs[(int)Quests.Tree].QuestComplete();
+            npcs[(int)Quests.Tree].QuestComplete();
         }
-        var text = "Leaves shaken of trees " + _scores[(int)Quests.Tree] + "/" + "15";
+        var text = "Leaves shaken of trees " + _scores[(int)Quests.Tree] + "/" + "13";
         StartCoroutine(PopUp(text));
     }
 
+    public void AddFlower()
+    {
+        _scores[(int) Quests.Flowers]++;
+        if (_scores[(int)Quests.Flowers] == 6)
+        {
+            npcs[(int)Quests.Flowers].QuestComplete();
+        }
+        var text = "Flowers planted  " + _scores[(int)Quests.Flowers] + "/" + "6";
+        StartCoroutine(PopUp(text));
+    }
+    
+    public void AddPumpkin()
+    {
+        _scores[(int) Quests.Pumpkins]++;
+        if (_scores[(int)Quests.Pumpkins] == 5)
+        {
+            npcs[(int)Quests.Pumpkins].QuestComplete();
+        }
+        var text = "Spooky Pumpkins Carved  " + _scores[(int)Quests.Pumpkins] + "/" + "5";
+        StartCoroutine(PopUp(text));
+    }
+    
+    public void AddAcorn()
+    {
+        _scores[(int) Quests.Acorns]++;
+        if (_scores[(int)Quests.Acorns] == 3)
+        {
+            npcs[(int)Quests.Acorns].QuestComplete();
+        }
+        var text = "Nuts scurried away " + _scores[(int)Quests.Acorns] + "/" + "3";
+        StartCoroutine(PopUp(text));
+    }
+    
+    public void AddBerry()
+    {
+        _scores[(int) Quests.Berries]++;
+        if (_scores[(int)Quests.Berries] == 3)
+        {
+            npcs[(int)Quests.Berries].QuestComplete();
+        }
+        var text = "Berries for winter collected  " + _scores[(int)Quests.Berries] + "/" + "3";
+        StartCoroutine(PopUp(text));
+    }
+    
+    public void AddBearPumpkin()
+    {
+        _scores[(int) Quests.BearPumpkin]++;
+        if (_scores[(int)Quests.BearPumpkin] == 1)
+        {
+            npcs[(int)Quests.BearPumpkin].QuestComplete();
+        }
+        var text = "Pumpkin Pie Materials Delivered  " + _scores[(int)Quests.BearPumpkin] + "/" + "1";
+        StartCoroutine(PopUp(text));
+    }
+    
     private IEnumerator PopUp(string text)
     {
         _popUpText.text = text;

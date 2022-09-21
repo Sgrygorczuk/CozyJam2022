@@ -159,9 +159,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resultSprites:
   - {fileID: 21300000, guid: db359f869aac4ae45a17641e00175c42, type: 3}
-  - {fileID: 21300000, guid: 5268011d71f9c424ba59fadaf7bb90d4, type: 3}
+  - {fileID: 21300000, guid: d3b536bc8d7167342aea88d615cb9ac2, type: 3}
   - {fileID: 21300000, guid: 6df920b88bf08644f9237763ebae8b36, type: 3}
-  - {fileID: 21300000, guid: 9ff8738c480fe1a4fb074e01abd40c51, type: 3}
+  - {fileID: 21300000, guid: 1aa3e7be7d1bbe44a8c05b4c1ccf5957, type: 3}
   type: 0
 --- !u!50 &2201217085617825061
 Rigidbody2D:

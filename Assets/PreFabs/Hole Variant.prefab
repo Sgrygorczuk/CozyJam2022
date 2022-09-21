@@ -13,12 +13,20 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 7c93bf28f1e148e4c86dd43eae876e40, type: 3}
     - target: {fileID: 2201217085617825057, guid: 11a927cabc661b841b19be16097404f7, type: 3}
       propertyPath: m_Name
-      value: Hole
+      value: Hole Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2201217085617825058, guid: 11a927cabc661b841b19be16097404f7, type: 3}
       propertyPath: type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2201217085617825058, guid: 11a927cabc661b841b19be16097404f7, type: 3}
+      propertyPath: resultSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: d3b536bc8d7167342aea88d615cb9ac2, type: 3}
+    - target: {fileID: 2201217085617825058, guid: 11a927cabc661b841b19be16097404f7, type: 3}
+      propertyPath: resultSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1aa3e7be7d1bbe44a8c05b4c1ccf5957, type: 3}
     - target: {fileID: 2201217085617825059, guid: 11a927cabc661b841b19be16097404f7, type: 3}
       propertyPath: m_RootOrder
       value: 0

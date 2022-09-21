@@ -7,6 +7,7 @@ public class Hole : MonoBehaviour
 {
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _boxCollider2D;
+    private GameFlow _gameFlow;
 
     [SerializeField] private Sprite[] resultSprites;
 
@@ -15,7 +16,8 @@ public class Hole : MonoBehaviour
         Seed,
         Pumpkin,
         Berry,
-        Acorn
+        Acorn,
+        BearPumpkin
     }
 
     [SerializeField] private Type type;
@@ -23,6 +25,7 @@ public class Hole : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _gameFlow = GameObject.Find("GameFlow").GetComponent<GameFlow>();
         _spriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         _boxCollider2D = GetComponent<BoxCollider2D>();
     }
@@ -33,22 +36,30 @@ public class Hole : MonoBehaviour
         print(col.name);
         if (col.CompareTag($"PickUp"))
         {
-            print(col.GetComponent<PickUpObject>().GetName());
             if (col.GetComponent<PickUpObject>().GetName() == "Seed" && type == Type.Seed)
             {
                 PerformAction(col, 0);
+                _gameFlow.AddFlower();
             }
             else if (col.GetComponent<PickUpObject>().GetName() == "Acorn" && type == Type.Acorn)
             {
                 PerformAction(col, 1);
+                _gameFlow.AddAcorn();
             }
             else if (col.GetComponent<PickUpObject>().GetName() == "Berry" && type == Type.Berry)
             {
                 PerformAction(col, 2);
+                _gameFlow.AddBerry();
             }
             else if (col.GetComponent<PickUpObject>().GetName() == "Pumpkin" && type == Type.Pumpkin)
             {
                 PerformAction(col, 3);
+                _gameFlow.AddPumpkin();
+            }
+            else if (col.GetComponent<PickUpObject>().GetName() == "Pumpkin" && type == Type.BearPumpkin)
+            {
+                PerformAction(col, 3);
+                _gameFlow.AddBearPumpkin();
             }
         }
     }

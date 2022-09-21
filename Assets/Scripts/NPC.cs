@@ -3,8 +3,9 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
     
-    private string _itemName;
-    private static bool _isHoldingItem;
+    [SerializeField] private string itemName;
+    [SerializeField] private bool isHoldingItem;
+    [SerializeField] private Sprite startSprite;
     private SpriteRenderer _spriteRenderer;
     private ParticleSystem _particleSystem;
     [SerializeField] private Material[] material;
@@ -22,7 +23,8 @@ public class NPC : MonoBehaviour
     void Start()
     {
         _spriteRenderer = transform.Find("PickedUpObject").transform.Find("Object").GetComponent<SpriteRenderer>();
-        _spriteRenderer.enabled = false;
+        _spriteRenderer.enabled = isHoldingItem;
+        _spriteRenderer.sprite = startSprite;
         _gameFlow = GameObject.Find("GameFlow").GetComponent<GameFlow>();
         _particleSystem = transform.Find("ParticleSystem").GetComponent<ParticleSystem>();
         _talkSpriteRenderer = transform.Find("TalkSprite").GetComponent<SpriteRenderer>();
@@ -67,23 +69,23 @@ public class NPC : MonoBehaviour
 
     private void GetObject(Component col)
     {
-        if (!_isHoldingItem)
+        if (!isHoldingItem)
         {
             var parent = col.transform.parent;
             parent.GetComponent<PlayerTalkResult>().GiveObjectAway();
-            _itemName = parent.GetComponent<PlayerTalkResult>().GiveItemName();
+            itemName = parent.GetComponent<PlayerTalkResult>().GiveItemName();
             _spriteRenderer.sprite = parent.GetComponent<PlayerTalkResult>().GiveItemSprite();
-            _isHoldingItem = true;
+            isHoldingItem = true;
             _spriteRenderer.enabled = true;   
         }
     }
 
     private void GiveObject(Component col)
     {
-        if (_isHoldingItem)
+        if (isHoldingItem)
         {
-            col.transform.parent.GetComponent<PlayerTalkResult>().PickItem(_itemName, _spriteRenderer.sprite);
-            _isHoldingItem = false;
+            col.transform.parent.GetComponent<PlayerTalkResult>().PickItem(itemName, _spriteRenderer.sprite);
+            isHoldingItem = false;
             _spriteRenderer.enabled = false;   
         }   
     }
