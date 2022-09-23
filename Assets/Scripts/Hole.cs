@@ -17,7 +17,8 @@ public class Hole : MonoBehaviour
         Pumpkin,
         Berry,
         Acorn,
-        BearPumpkin
+        BearPumpkin,
+        SeedTwo
     }
 
     [SerializeField] private Type type;
@@ -58,8 +59,13 @@ public class Hole : MonoBehaviour
             }
             else if (col.GetComponent<PickUpObject>().GetName() == "Pumpkin" && type == Type.BearPumpkin)
             {
-                PerformAction(col, 3);
+                PerformAction(col, 4);
                 _gameFlow.AddBearPumpkin();
+            }
+            else if (col.GetComponent<PickUpObject>().GetName() == "Seed" && type == Type.SeedTwo)
+            {
+                PerformAction(col, 5);
+                _gameFlow.AddBirdSeed();
             }
         }
     }

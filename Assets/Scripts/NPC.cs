@@ -45,7 +45,7 @@ public class NPC : MonoBehaviour
                 }
                 case 3:
                 {
-                    ReactRude();
+                    GiveObject(col);
                     break;
                 }
                 case 9:
@@ -55,7 +55,7 @@ public class NPC : MonoBehaviour
                 }
                 case 18:
                 {
-                    GiveObject(col);
+                    ReactRude();
                     break;
                 }
                 case 27:

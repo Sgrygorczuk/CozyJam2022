@@ -15,6 +15,10 @@ public class GameFlow : MonoBehaviour
     private GameObject _gameCanvas;
     private GameObject _popUp;
     private TextMeshProUGUI _popUpText;
+    private GameObject _winSpot;
+    [SerializeField] private int _winCounter = 0;
+    [SerializeField] private string[] sentences;      //Holds all the lines the person will say 
+    private Animator _cameraAnimator;
 
         private enum Quests
     {
@@ -24,6 +28,8 @@ public class GameFlow : MonoBehaviour
         Berries,
         Pumpkins,
         BearPumpkin,
+        BirdSeed,
+        BirdSeed2,
     }
 
     [SerializeField] private List<NPC> npcs = new List<NPC>();
@@ -53,20 +59,17 @@ public class GameFlow : MonoBehaviour
         _playerWalk = GameObject.Find($"Player").GetComponent<PlayerWalk>();
         _gameCanvas = GameObject.Find("GameCanvas");
         _popUp = GameObject.Find("GameCanvas").transform.Find("PopUp").gameObject;
+        _winSpot = GameObject.Find("WinSpot");
+        _winSpot.SetActive(false);
         _popUpText = _popUp.transform.Find("PopUpText").GetComponent<TextMeshProUGUI>();
+        _cameraAnimator = GameObject.Find("Player").transform.Find("Main Camera").GetComponent<Animator>();
     }
 
     // Update is called once per frame
     public void Update()
     {
         //Checks if the player is playing a desktop version if they are enables them to use ESC to quit out of the game 
-        if (Application.platform is RuntimePlatform.WindowsPlayer or RuntimePlatform.LinuxPlayer)
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                Application.Quit();
-            }
-        }
+     
         
         //Checks what state the game is currently in and updates it 
         switch (_currentState)
@@ -116,13 +119,29 @@ public class GameFlow : MonoBehaviour
     public void EndGame()
     {
         _currentState = GameState.End;
-        StartCoroutine(Wipe());   
+        _gameCanvas.SetActive(false);
+        _cameraAnimator.Play($"End");
+        Invoke($"End", 15.1f);
+    }
+
+    private void End()
+    {
+        SceneManager.LoadScene($"Credits");
     }
     
     //Start the talking section 
     public void EnterDialogue(string[] sentences, Sprite sprite)
     {
         _talkController.LoadText(sentences, sprite);
+        _gameCanvas.SetActive(false);
+        _talkController.SetCanvas(true);
+        _talkController.NextSentence();
+        _currentState = GameState.TalkTime;
+    }
+    
+    public void EnterDialogue(string[] sentences)
+    {
+        _talkController.LoadText(sentences);
         _gameCanvas.SetActive(false);
         _talkController.SetCanvas(true);
         _talkController.NextSentence();
@@ -143,6 +162,7 @@ public class GameFlow : MonoBehaviour
         if (_scores[(int)Quests.Tree] == 13)
         {
             npcs[(int)Quests.Tree].QuestComplete();
+            WinCounter();
         }
         var text = "Leaves shaken of trees " + _scores[(int)Quests.Tree] + "/" + "13";
         StartCoroutine(PopUp(text));
@@ -154,6 +174,7 @@ public class GameFlow : MonoBehaviour
         if (_scores[(int)Quests.Flowers] == 6)
         {
             npcs[(int)Quests.Flowers].QuestComplete();
+            WinCounter();
         }
         var text = "Flowers planted  " + _scores[(int)Quests.Flowers] + "/" + "6";
         StartCoroutine(PopUp(text));
@@ -165,6 +186,7 @@ public class GameFlow : MonoBehaviour
         if (_scores[(int)Quests.Pumpkins] == 5)
         {
             npcs[(int)Quests.Pumpkins].QuestComplete();
+            WinCounter();
         }
         var text = "Spooky Pumpkins Carved  " + _scores[(int)Quests.Pumpkins] + "/" + "5";
         StartCoroutine(PopUp(text));
@@ -176,6 +198,7 @@ public class GameFlow : MonoBehaviour
         if (_scores[(int)Quests.Acorns] == 3)
         {
             npcs[(int)Quests.Acorns].QuestComplete();
+            WinCounter();
         }
         var text = "Nuts scurried away " + _scores[(int)Quests.Acorns] + "/" + "3";
         StartCoroutine(PopUp(text));
@@ -187,6 +210,7 @@ public class GameFlow : MonoBehaviour
         if (_scores[(int)Quests.Berries] == 3)
         {
             npcs[(int)Quests.Berries].QuestComplete();
+            WinCounter();
         }
         var text = "Berries for winter collected  " + _scores[(int)Quests.Berries] + "/" + "3";
         StartCoroutine(PopUp(text));
@@ -198,9 +222,34 @@ public class GameFlow : MonoBehaviour
         if (_scores[(int)Quests.BearPumpkin] == 1)
         {
             npcs[(int)Quests.BearPumpkin].QuestComplete();
+            WinCounter();
         }
-        var text = "Pumpkin Pie Materials Delivered  " + _scores[(int)Quests.BearPumpkin] + "/" + "1";
+        var text = "Pumpkin Discreetly Delivered " + _scores[(int)Quests.BearPumpkin] + "/" + "1";
         StartCoroutine(PopUp(text));
+    }
+    
+        
+    public void AddBirdSeed()
+    {
+        _scores[(int) Quests.BirdSeed]++;
+        if (_scores[(int)Quests.BirdSeed] == 1)
+        {
+            npcs[(int)Quests.BirdSeed].QuestComplete();
+            npcs[(int)Quests.BirdSeed2].QuestComplete();
+            WinCounter();
+        }
+        var text = "Special Flower Deliver " + _scores[(int)Quests.BirdSeed] + "/" + "1";
+        StartCoroutine(PopUp(text));
+    }
+
+    private void WinCounter()
+    {
+        _winCounter++;
+        if (_winCounter == 7)
+        {
+            _winSpot.SetActive(true);   
+            EnterDialogue(sentences);
+        }
     }
     
     private IEnumerator PopUp(string text)
@@ -210,6 +259,5 @@ public class GameFlow : MonoBehaviour
         yield return new WaitForSeconds(3);
         _popUp.SetActive(false);
     }
-    
-    
+
 }

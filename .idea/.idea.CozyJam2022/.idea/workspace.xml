@@ -2,63 +2,105 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2dadf64-861e-499d-a5d7-805fb06aa3a0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Talk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Talk.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Talk_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Talk_2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Talk_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Talk_3.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UI.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/UI.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Camera.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Camera/End.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Camera/End.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Camera/Idle.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Camera/Idle.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Camera/Main Camera.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Camera/Main Camera.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Text.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Text/FadeInAndOut.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Text/FadeInAndOut.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Text/Text (TMP).controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animation/Text/Text (TMP).controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Fonts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Fonts/RumRaisin-Regular SDF.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Fonts/RumRaisin-Regular SDF.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Fonts/RumRaisin-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Fonts/RumRaisin-Regular.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Music.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Music/Level.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Music/Level.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Music/Title.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Music/Title.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SFX/Note B.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SFX/Note B.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SFX/Note D.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SFX/Note D.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SFX/Note G.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SFX/Note G.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Credits.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Credits.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Credits.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Credits.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Bar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Bar.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Berry_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Berry_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Flower_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Flower_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/GameLogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/GameLogo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Logo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Materials/Acorn.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Materials/Acorn.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StreamingAssets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_WebGL.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CozyJam2022/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CozyJam2022/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/TalkShapes/Grow.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/TalkShapes/Grow.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PreFabs/Bush.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFabs/Bush.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFabs/Circle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFabs/Circle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PreFabs/Hole Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFabs/Hole Variant.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PreFabs/Hole.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFabs/Hole.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFabs/NPCs/Bear Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFabs/NPCs/Bear Variant.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PreFabs/NPCs/Bird Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFabs/NPCs/Bird Variant.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PreFabs/NPCs/GrandpaTree Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFabs/NPCs/GrandpaTree Variant.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PreFabs/NPCs/Leaflie Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFabs/NPCs/Leaflie Variant.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PreFabs/NPCs/NPC.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFabs/NPCs/NPC.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFabs/PickUpObjects/Acorn Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFabs/PickUpObjects/Acorn Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFabs/PickUpObjects/PickUpObject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFabs/PickUpObjects/PickUpObject.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PreFabs/PickUpObjects/Seed Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFabs/PickUpObjects/Seed Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFabs/NPCs/Squirl Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFabs/NPCs/Squirl Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFabs/Square.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFabs/Square.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PreFabs/Tree.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFabs/Tree.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PreFabs/Triangle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PreFabs/Triangle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SFX/SFX1.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SFX/SFX1.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SFX/SFX2.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SFX/SFX2.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SFX/SFX3.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SFX/SFX3.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SFX/SFXAngry.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SFX/SFXAngry.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFlow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameFlow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hole.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/NPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NPC.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/6136b3ab1c240227b8887f58763e50cd(1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/6136b3ab1c240227b8887f58763e50cd(1).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Acorn.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Acorn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Bear.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Bear.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Bird.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Bird.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Circle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Circle.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/DropSpot.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/DropSpot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Flower.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Flower.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Hole.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Hole.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/LeafMode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/LeafMode.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Map.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Map.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Map.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Map.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Pumpkin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Pumpkin.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Square.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Square.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Squirl.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Squirl.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Tree_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Tree_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Tree_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Tree_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Tree_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Tree_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Triangle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Triangle.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UIMenu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UIMenu.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Words.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Words.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/WordsDone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/WordsDone.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/WordsQuest.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/WordsQuest.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerTalk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerTalk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerWalk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerWalk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TalkController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TalkController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Bird.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Bird.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/CheetSheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/CheetSheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Leaf_Move.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Leaf_Move.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Leaf_Move.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Leaf_Move.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
@@ -99,6 +141,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Desktop/Songs Of Autumn\Songs of Autumn.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\sgryg\OneDrive\Desktop\Songs Of Autumn" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.6f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\sgryg\OneDrive\Documents\GitHub\CozyJam2022\CozyJam2022 -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
@@ -144,6 +194,8 @@
       <workItem from="1663252795819" duration="780000" />
       <workItem from="1663686421041" duration="14416000" />
       <workItem from="1663773610726" duration="3328000" />
+      <workItem from="1663847199680" duration="11944000" />
+      <workItem from="1663898395763" duration="647000" />
     </task>
     <servers />
   </component>
@@ -173,13 +225,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Hole.cs</url>
-          <line>36</line>
+          <line>37</line>
           <properties documentPath="C:\Users\sgryg\OneDrive\Documents\GitHub\CozyJam2022\Assets\Scripts\Hole.cs" initialLine="36" containingFunctionPresentation="method 'OnTriggerEnter2D'">
             <startOffsets>
-              <option value="867" />
+              <option value="884" />
             </startOffsets>
             <endOffsets>
-              <option value="871" />
+              <option value="888" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />

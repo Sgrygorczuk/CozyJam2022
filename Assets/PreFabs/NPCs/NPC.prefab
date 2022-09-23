@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7413218553928276410}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7413218552555362228
 SpriteRenderer:
@@ -114,7 +114,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7413218553928276410}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7413218552816808262
 SpriteRenderer:
@@ -198,7 +198,7 @@ Transform:
   m_Children:
   - {fileID: 438292638080152115}
   m_Father: {fileID: 7413218553928276410}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7413218553928276407
 GameObject:
@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 7413218553928276408}
   - component: {fileID: 7413218553928276413}
   - component: {fileID: 5020728057893458756}
-  - component: {fileID: 3765863509455045153}
+  - component: {fileID: 2818221950630673587}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -232,10 +232,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7413218552555362227}
   - {fileID: 7413218553874836534}
   - {fileID: 7413218552816808261}
   - {fileID: 7413218554021844756}
+  - {fileID: 7413218552555362227}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -272,6 +272,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a14898845357cbc4da21272f6476232a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: 
+  isHoldingItem: 0
+  startSprite: {fileID: 0}
   material:
   - {fileID: 2100000, guid: f8bffba3533dfb347ac19b54b8bd1acf, type: 2}
   - {fileID: 2100000, guid: a92e8c6c5ea19e44f940d38409d2b351, type: 2}
@@ -334,8 +337,8 @@ PolygonCollider2D:
       - {x: 1.4947431, y: -1.1965424}
       - {x: 1.4290506, y: -0.8233893}
       - {x: 0.9510565, y: 0.30901712}
---- !u!60 &3765863509455045153
-PolygonCollider2D:
+--- !u!61 &2818221950630673587
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -347,7 +350,7 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.023278475, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -357,32 +360,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.6976359, y: 0.49450773}
-      - {x: 0.82300615, y: 0.99486935}
-      - {x: 0.79960537, y: 1.2263082}
-      - {x: 1.0921503, y: 1.6254957}
-      - {x: 0.73506474, y: 1.8334836}
-      - {x: 0.4620539, y: 1.7164242}
-      - {x: 0.11379552, y: 1.9805663}
-      - {x: -0.422745, y: 1.7750326}
-      - {x: -0.7653966, y: 1.8079462}
-      - {x: -0.98499155, y: 1.0846505}
-      - {x: -1.0038996, y: 0.5203895}
-      - {x: -0.72824335, y: 0.32576618}
-      - {x: -1.1188443, y: -0.0057826713}
-      - {x: -1.179627, y: -0.7194904}
-      - {x: -1.4508896, y: -1.0380039}
-      - {x: -1.4265344, y: -1.6248995}
-      - {x: -1.2179978, y: -1.8816928}
-      - {x: -0.06341171, y: -1.8482652}
-      - {x: 0.58727205, y: -1.9821441}
-      - {x: 1.4332755, y: -1.8306508}
-      - {x: 1.5969312, y: -1.5790969}
-      - {x: 1.4947431, y: -1.1965424}
-      - {x: 1.4290506, y: -0.8233893}
-      - {x: 0.9510565, y: 0.30901712}
+  serializedVersion: 2
+  m_Size: {x: 3.5140972, y: 4.1193438}
+  m_EdgeRadius: 0
 --- !u!1 &7413218554021844755
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,13 +388,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7413218554021844755}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.027, y: 1.267, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.02699995, y: 1.2670001, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7413218553928276410}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &7413218554021844758
 ParticleSystem:
@@ -424,7 +404,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7413218554021844755}
   serializedVersion: 8
-  lengthInSec: 5
+  lengthInSec: 2.5
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -668,7 +648,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 2.12
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1045,10 +1025,10 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 25
+    angle: 90
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 0.31
+    radiusThickness: 0.39
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -1131,7 +1111,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.15
+      value: 1.95
       mode: 0
       spread: 0
       speed:
@@ -5136,7 +5116,7 @@ ParticleSystemRenderer:
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
-  m_MotionVectors: 1
+  m_MotionVectors: 0
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
@@ -5162,9 +5142,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1000
+  m_SortingLayerID: 355614381
+  m_SortingLayer: 1
+  m_SortingOrder: 2084
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -5181,12 +5161,12 @@ ParticleSystemRenderer:
   m_Flip: {x: 0, y: 0, z: 0}
   m_UseCustomVertexStreams: 0
   m_EnableGPUInstancing: 1
-  m_ApplyActiveColorSpace: 1
+  m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
   m_VertexStreams: 00010304
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}

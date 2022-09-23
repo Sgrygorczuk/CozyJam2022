@@ -11,6 +11,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7c93bf28f1e148e4c86dd43eae876e40, type: 3}
+    - target: {fileID: 2201217085617825056, guid: 11a927cabc661b841b19be16097404f7, type: 3}
+      propertyPath: m_Size.x
+      value: 1.9800262
+      objectReference: {fileID: 0}
+    - target: {fileID: 2201217085617825056, guid: 11a927cabc661b841b19be16097404f7, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8857455
+      objectReference: {fileID: 0}
+    - target: {fileID: 2201217085617825056, guid: 11a927cabc661b841b19be16097404f7, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.05683136
+      objectReference: {fileID: 0}
+    - target: {fileID: 2201217085617825056, guid: 11a927cabc661b841b19be16097404f7, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.34778
+      objectReference: {fileID: 0}
     - target: {fileID: 2201217085617825057, guid: 11a927cabc661b841b19be16097404f7, type: 3}
       propertyPath: m_Name
       value: Hole Variant

@@ -65,6 +65,14 @@ public class TalkController : MonoBehaviour
         sentences = newSentences;
         //_character.sprite = sprite;
     }
+    
+    //Loads in the new data from a Talk Zone and resets the index 
+    public void LoadText(string[] newSentences)
+    {
+        index = 0;
+        sentences = newSentences;
+        //_character.sprite = sprite;
+    }
 
     //Tells us if we reached the end 
     private bool Done()

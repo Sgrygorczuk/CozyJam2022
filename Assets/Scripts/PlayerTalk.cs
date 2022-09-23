@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class PlayerTalk : MonoBehaviour
 {
-
-    private readonly AudioSource[] _audioSources = new AudioSource[3];
     [SerializeField] private GameObject[] preFab;
     [SerializeField] private Sprite[] sprites;
     private readonly Image[] _queueImages = new Image[3];
@@ -19,30 +17,23 @@ public class PlayerTalk : MonoBehaviour
     private bool _isCountingDown;
     private float _currentTime = 10.0f;
     [SerializeField] private float waitTime = 10.0f;
-
+    private bool _isCheatSheet;
     private List<int> _talkQueue = new List<int>();
+    private GameObject _cheatSheetCanvas; 
     
     // Start is called before the first frame update
     private void Start()
     {
-        FindAndPopulateAudio();
         FindAndPopulateQueueImages();
         _shapeSpawn = transform.Find("ShapeSpawn").transform;
         _queueBar = GameObject.Find("GameCanvas").transform.Find("QueueBar").GetComponent<Image>();
         _queueAnimator = GameObject.Find("GameCanvas").transform.Find("Queue").GetComponent<Animator>();
+        _cheatSheetCanvas = GameObject.Find("CheatSheetCanvas").gameObject;
+        _cheatSheetCanvas.SetActive(false);
         _triggerCollider = transform.Find("Collider").gameObject;
         _triggerCollider.SetActive(false);
         _queueBar.fillAmount = 0;
         _playerTalkResult = GetComponent<PlayerTalkResult>();
-    }
-
-    private void FindAndPopulateAudio()
-    {
-        var sfx = transform.Find("SFX").transform;
-        for (var i = 0; i < sfx.childCount; i++)
-        {
-            _audioSources[i] = sfx.GetChild(i).GetComponent<AudioSource>();
-        }
     }
 
     private void FindAndPopulateQueueImages()
@@ -57,11 +48,24 @@ public class PlayerTalk : MonoBehaviour
     // Update is called once per frame
     public void UpdateTalk()
     {
-        if (_playerTalkResult.GetIsTransformed())
+        if (_isCheatSheet)
         {
-            if ((Input.GetButtonDown($"Sound1") || (Input.GetButtonDown($"Sound2")) || (Input.GetButtonDown($"Sound2"))))
+            if (Input.GetKeyDown(KeyCode.Escape)){
+                _isCheatSheet = false;
+                _cheatSheetCanvas.SetActive(_isCheatSheet);
+            }
+            
+        }
+        else if (_playerTalkResult.GetIsTransformed())
+        {
+            if ((Input.GetButtonDown($"Sound1") || (Input.GetButtonDown($"Sound2")) || (Input.GetButtonDown($"Sound3"))))
             {
                 _playerTalkResult.PlayerAction(12);
+            }
+            
+            if (Input.GetKeyDown(KeyCode.Escape)){
+                _isCheatSheet = true;
+                _cheatSheetCanvas.SetActive(_isCheatSheet);
             }
         }
         else
@@ -72,6 +76,11 @@ public class PlayerTalk : MonoBehaviour
                 return;
             }
         
+            if (Input.GetKeyDown(KeyCode.Escape)){
+                _isCheatSheet = true;
+                _cheatSheetCanvas.SetActive(_isCheatSheet);
+            }
+            
             if (Input.GetButtonDown($"Sound1") && !_hasPlayed)
             {
                 Action(0);
@@ -109,7 +118,6 @@ public class PlayerTalk : MonoBehaviour
     private void Action(int i)
     {
         UpdateQueue(i);
-        _audioSources[i].Play();
         var instantiate = Instantiate(preFab[i], transform.position, Quaternion.identity);
         instantiate.transform.parent = _shapeSpawn;
         _hasPlayed = true;
@@ -157,4 +165,5 @@ public class PlayerTalk : MonoBehaviour
         yield return new WaitForSeconds(time);
         _hasPlayed = false;
     }
+    
 }

@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2818221950630673587, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_Size.x
+      value: 4.1544876
+      objectReference: {fileID: 0}
+    - target: {fileID: 2818221950630673587, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.103328705
+      objectReference: {fileID: 0}
     - target: {fileID: 3765863509455045153, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -625,7 +633,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: b882aeb23c2bef644b83df4afe406d8c, type: 3}
     - target: {fileID: 7413218553928276407, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
       propertyPath: m_Name
-      value: Squirl
+      value: Squirl Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7413218553928276410, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
       propertyPath: m_RootOrder
@@ -670,6 +678,14 @@ PrefabInstance:
     - target: {fileID: 7413218553928276410, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218554021844756, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413218554021844756, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bcfce9365eb2244cadc4ab63d354eed, type: 3}

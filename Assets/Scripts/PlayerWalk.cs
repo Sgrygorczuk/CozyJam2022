@@ -9,6 +9,7 @@ public class PlayerWalk : MonoBehaviour
     [SerializeField] private float transformedSpeed = 5;
     [SerializeField] private Sprite[] sprites;
     private SpriteRenderer _spriteRenderer;
+    private GameFlow _gameFlow;
 
     private PlayerTalkResult _playerTalkResult;
  
@@ -18,6 +19,7 @@ public class PlayerWalk : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _spriteRenderer = transform.Find("Sprite").GetComponent<SpriteRenderer>();
         _playerTalkResult = GetComponent<PlayerTalkResult>();
+        _gameFlow = GameObject.Find("GameFlow").GetComponent<GameFlow>();
     }
 
     // Update is called once per frame
@@ -50,5 +52,13 @@ public class PlayerWalk : MonoBehaviour
 
         var trueSpeed = _playerTalkResult.GetIsTransformed() ? transformedSpeed : speed; 
         _rigidbody2D.velocity = new Vector2(_x * trueSpeed, _y * trueSpeed);
+    }
+    
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("Finish"))
+        {
+            _gameFlow.EndGame();
+        }
     }
 }
