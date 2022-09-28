@@ -1,26 +1,31 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Player;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Controls how the game plays 
+/// </summary>
 public class GameFlow : MonoBehaviour
 {
     //==== Control Scripts 
-    private TalkController _talkController;
-    private PlayerWalk _playerWalk;
-    private PlayerTalk _playerTalk;
-    private Animator _fadeAnimator;      //Allows us to fade in and out 
-    private GameObject _gameCanvas;
-    private GameObject _popUp;
-    private TextMeshProUGUI _popUpText;
-    private GameObject _winSpot;
-    [SerializeField] private int _winCounter = 0;
+    private TalkController _talkController; //Controls the Talk UI 
+    private PlayerWalk _playerWalk;         //Controls player walking   
+    private PlayerTalk _playerTalk;         //Control player talking 
+    private GameObject _gameCanvas;         //Controls canvas that show player Queue 
+    private GameObject _popUp;              //Shows player pop ups inside game canvas 
+    private TextMeshProUGUI _popUpText;     //Controls the text in pop up 
+    private GameObject _winSpot;            //Controls the place 
     [SerializeField] private string[] sentences;      //Holds all the lines the person will say 
-    private Animator _cameraAnimator;
+    private Animator _cameraAnimator;       //Controls the start and end animations 
+    
 
-        private enum Quests
+    //================== Quest Data  
+    //Holds the different types of quests 
+    public enum Quests
     {
         Tree, 
         Flowers,
@@ -31,10 +36,18 @@ public class GameFlow : MonoBehaviour
         BirdSeed,
         BirdSeed2,
     }
-
-    [SerializeField] private List<NPC> npcs = new List<NPC>();
-    private int[] _scores = new int[10];
-
+    
+    [SerializeField] private List<NPC> nonPlayableCharacters = new List<NPC>(); //Holds all the characters affected by quest 
+    private readonly string[] _popUps = {                                       //Holds all the quest pop up texts 
+        "Leaves shaken of trees ", "Flowers planted  ",
+        "Nuts scurried away ", "Berries for winter collected  ", 
+        "Spooky Pumpkins Carved  ", "Pumpkin Discreetly Delivered ",
+        "Special Flower Deliver "
+    };
+    private readonly int[] _scores = new int[7];                                //Holds current counters in game 
+    private readonly int[] _results = {13, 6, 3, 3, 5, 1, 1};                   //Holds the results each quest strives for 
+    [SerializeField] private int winCounter;                                    //Keeps track of how many quests have been completed 
+    
     //===== Game Flow 
     private enum GameState             
     {
@@ -53,7 +66,6 @@ public class GameFlow : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        //_fadeAnimator = GameObject.Find($"Fade Canvas").GetComponent<Animator>();
         _talkController = GameObject.Find($"Dialogue_Canvas").GetComponent<TalkController>();
         _playerTalk = GameObject.Find($"Player").GetComponent<PlayerTalk>();
         _playerWalk = GameObject.Find($"Player").GetComponent<PlayerWalk>();
@@ -68,9 +80,6 @@ public class GameFlow : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        //Checks if the player is playing a desktop version if they are enables them to use ESC to quit out of the game 
-     
-        
         //Checks what state the game is currently in and updates it 
         switch (_currentState)
         {
@@ -104,7 +113,6 @@ public class GameFlow : MonoBehaviour
     private IEnumerator StartGame()
     {
         _gameCanvas.SetActive(false);
-            //_fadeAnimator.Play("ScreenFade");
         yield return new WaitForSeconds(1);
         _talkController.NextSentence();
     }
@@ -121,11 +129,12 @@ public class GameFlow : MonoBehaviour
         _currentState = GameState.End;
         _gameCanvas.SetActive(false);
         _cameraAnimator.Play($"End");
-        Invoke($"End", 15.1f);
+        StartCoroutine(End());
     }
 
-    private void End()
+    private static IEnumerator End()
     {
+        yield return new WaitForSeconds(15.1f);
         SceneManager.LoadScene($"Credits");
     }
     
@@ -138,8 +147,8 @@ public class GameFlow : MonoBehaviour
         _talkController.NextSentence();
         _currentState = GameState.TalkTime;
     }
-    
-    public void EnterDialogue(string[] sentences)
+
+    private void EnterDialogue(string[] sentences)
     {
         _talkController.LoadText(sentences);
         _gameCanvas.SetActive(false);
@@ -148,108 +157,25 @@ public class GameFlow : MonoBehaviour
         _currentState = GameState.TalkTime;
     }
 
-    //Performs the animations and once it fade out we go to the next screen 
-    private IEnumerator Wipe()
+    public void AddQuest(Quests quests)
     {
-        //_fadeAnimator.Play("ScreenFadeIn");
-        yield return new WaitForSeconds(0.95f);
-        SceneManager.LoadScene($"TBC");
-    }
+        _scores[(int) quests]++;
+        var text = _popUps[(int)quests] + _scores[(int)quests] + "/" + _results[(int)quests];
+        StartCoroutine(PopUp(text));
+        if (_scores[(int)quests] != _results[(int)quests]) return;
+        nonPlayableCharacters[(int)quests].QuestComplete();
+        WinCounter();
 
-    public void AddTree()
-    {
-        _scores[(int) Quests.Tree]++;
-        if (_scores[(int)Quests.Tree] == 13)
-        {
-            npcs[(int)Quests.Tree].QuestComplete();
-            WinCounter();
-        }
-        var text = "Leaves shaken of trees " + _scores[(int)Quests.Tree] + "/" + "13";
-        StartCoroutine(PopUp(text));
-    }
-
-    public void AddFlower()
-    {
-        _scores[(int) Quests.Flowers]++;
-        if (_scores[(int)Quests.Flowers] == 6)
-        {
-            npcs[(int)Quests.Flowers].QuestComplete();
-            WinCounter();
-        }
-        var text = "Flowers planted  " + _scores[(int)Quests.Flowers] + "/" + "6";
-        StartCoroutine(PopUp(text));
+        //Accounts for the 2 Bird Quest Givers 
+        if (quests == Quests.BirdSeed) { nonPlayableCharacters[(int) Quests.BirdSeed2].QuestComplete(); }
     }
     
-    public void AddPumpkin()
-    {
-        _scores[(int) Quests.Pumpkins]++;
-        if (_scores[(int)Quests.Pumpkins] == 5)
-        {
-            npcs[(int)Quests.Pumpkins].QuestComplete();
-            WinCounter();
-        }
-        var text = "Spooky Pumpkins Carved  " + _scores[(int)Quests.Pumpkins] + "/" + "5";
-        StartCoroutine(PopUp(text));
-    }
-    
-    public void AddAcorn()
-    {
-        _scores[(int) Quests.Acorns]++;
-        if (_scores[(int)Quests.Acorns] == 3)
-        {
-            npcs[(int)Quests.Acorns].QuestComplete();
-            WinCounter();
-        }
-        var text = "Nuts scurried away " + _scores[(int)Quests.Acorns] + "/" + "3";
-        StartCoroutine(PopUp(text));
-    }
-    
-    public void AddBerry()
-    {
-        _scores[(int) Quests.Berries]++;
-        if (_scores[(int)Quests.Berries] == 3)
-        {
-            npcs[(int)Quests.Berries].QuestComplete();
-            WinCounter();
-        }
-        var text = "Berries for winter collected  " + _scores[(int)Quests.Berries] + "/" + "3";
-        StartCoroutine(PopUp(text));
-    }
-    
-    public void AddBearPumpkin()
-    {
-        _scores[(int) Quests.BearPumpkin]++;
-        if (_scores[(int)Quests.BearPumpkin] == 1)
-        {
-            npcs[(int)Quests.BearPumpkin].QuestComplete();
-            WinCounter();
-        }
-        var text = "Pumpkin Discreetly Delivered " + _scores[(int)Quests.BearPumpkin] + "/" + "1";
-        StartCoroutine(PopUp(text));
-    }
-    
-        
-    public void AddBirdSeed()
-    {
-        _scores[(int) Quests.BirdSeed]++;
-        if (_scores[(int)Quests.BirdSeed] == 1)
-        {
-            npcs[(int)Quests.BirdSeed].QuestComplete();
-            npcs[(int)Quests.BirdSeed2].QuestComplete();
-            WinCounter();
-        }
-        var text = "Special Flower Deliver " + _scores[(int)Quests.BirdSeed] + "/" + "1";
-        StartCoroutine(PopUp(text));
-    }
-
     private void WinCounter()
     {
-        _winCounter++;
-        if (_winCounter == 7)
-        {
-            _winSpot.SetActive(true);   
-            EnterDialogue(sentences);
-        }
+        winCounter++;
+        if (winCounter != 7) return;
+        _winSpot.SetActive(true);   
+        EnterDialogue(sentences);
     }
     
     private IEnumerator PopUp(string text)

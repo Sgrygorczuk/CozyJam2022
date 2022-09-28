@@ -112,20 +112,11 @@ public class TalkController : MonoBehaviour
             //If the player actioned to move forward we stop writing this sentence and we move onto the next one 
             if (_breakOut)
             {
-                //Clear our for next sentence 
+                //Fills out the rest of the sentence and preps is for the next one 
                 _breakOut = false;
+                _dialogueText.text = sentences[index];
                 index++;
-                _dialogueText.text = "";
-                //Check if we this would be the end or we can do the next sentence 
-                if (index >= sentences.Length)
-                {
-                    SetCanvas(false);
-                    _gameFlow.EndDialogue();
-                    _isTalking = false;
-                    yield break;
-                }
-                //Start the next sentence 
-                StartCoroutine(WriteSentence());
+                _isTalking = false;
                 yield break;
             }
             //Adds the letter 

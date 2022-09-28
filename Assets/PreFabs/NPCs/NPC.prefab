@@ -213,6 +213,7 @@ GameObject:
   - component: {fileID: 7413218553928276413}
   - component: {fileID: 5020728057893458756}
   - component: {fileID: 2818221950630673587}
+  - component: {fileID: 5244477994163568134}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -272,17 +273,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a14898845357cbc4da21272f6476232a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 
+  sprites: []
+  shouldBeTransparent: 0
   isHoldingItem: 0
-  startSprite: {fileID: 0}
-  material:
-  - {fileID: 2100000, guid: f8bffba3533dfb347ac19b54b8bd1acf, type: 2}
+  itemName: None
+  startPickedUpObjectSprite: {fileID: -2110910284, guid: 9f4ebf6630c710e41b2feab5b5625e84, type: 3}
+  particleEffectMaterials:
   - {fileID: 2100000, guid: a92e8c6c5ea19e44f940d38409d2b351, type: 2}
-  isQuestGiver: 0
+  - {fileID: 2100000, guid: f8bffba3533dfb347ac19b54b8bd1acf, type: 2}
   talkSprites:
   - {fileID: 21300000, guid: aa84953c8cf408446bba33c98fe50847, type: 3}
   - {fileID: 21300000, guid: 9de4d96ecadf197489b3a5f2ef79eb9d, type: 3}
   - {fileID: 21300000, guid: 20427cd7555fa8b45960ce831c766463, type: 3}
+  isQuestGiver: 0
   sentences:
   - d asd dsaas d dsa
   - asd asd sad sad asd
@@ -363,6 +366,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.5140972, y: 4.1193438}
   m_EdgeRadius: 0
+--- !u!95 &5244477994163568134
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7413218553928276407}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d0640db4d97ac6447ae02edffba9974c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7413218554021844755
 GameObject:
   m_ObjectHideFlags: 0

@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: bc71e9dc56edf3d47a2105741853e3c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -157,12 +157,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c717979f2a23fcd4cacf423e713511d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resultSprites:
+  sprites:
   - {fileID: 21300000, guid: db359f869aac4ae45a17641e00175c42, type: 3}
-  - {fileID: 21300000, guid: d3b536bc8d7167342aea88d615cb9ac2, type: 3}
-  - {fileID: 21300000, guid: 6e515ac2540ee054da2571064da66bc7, type: 3}
   - {fileID: 21300000, guid: 1aa3e7be7d1bbe44a8c05b4c1ccf5957, type: 3}
+  - {fileID: 21300000, guid: 6e515ac2540ee054da2571064da66bc7, type: 3}
+  - {fileID: 21300000, guid: d3b536bc8d7167342aea88d615cb9ac2, type: 3}
   - {fileID: 21300000, guid: cbe631a2eeccba34db9d88c932a5348b, type: 3}
+  - {fileID: 21300000, guid: 6a8cdf2c2d9c45e468bbc355ff27614d, type: 3}
+  shouldBeTransparent: 0
   type: 0
 --- !u!50 &2201217085617825061
 Rigidbody2D:
