@@ -136,12 +136,12 @@ public class NPC : GenericObject
         //If the NPC is a quest giver an quest is complete use second set of strings 
         if (isQuestGiver && _questComplete)
         {
-            _gameFlow.EnterDialogue(questCompleteSentences, _pickedUpObjectSpriteRenderer.sprite);   
+            _gameFlow.EnterDialogue(questCompleteSentences);   
         }
         //Otherwise use the base set of strings 
         else
         {
-            _gameFlow.EnterDialogue(sentences, _pickedUpObjectSpriteRenderer.sprite);
+            _gameFlow.EnterDialogue(sentences);
         }
     }
 

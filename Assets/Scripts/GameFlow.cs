@@ -60,24 +60,25 @@ public class GameFlow : MonoBehaviour
     private GameState _currentState = GameState.Start;      //Keeps track of what state we're currently in
     
     //==================================================================================================================
-    // Functions 
+    // Base Functions 
     //==================================================================================================================
     
     // Start is called before the first frame update
     private void Start()
     {
+        //Connects all components adn disables the win spot 
         _talkController = GameObject.Find($"Dialogue_Canvas").GetComponent<TalkController>();
         _playerTalk = GameObject.Find($"Player").GetComponent<PlayerTalk>();
         _playerWalk = GameObject.Find($"Player").GetComponent<PlayerWalk>();
         _gameCanvas = GameObject.Find("GameCanvas");
         _popUp = GameObject.Find("GameCanvas").transform.Find("PopUp").gameObject;
-        _winSpot = GameObject.Find("WinSpot");
-        _winSpot.SetActive(false);
         _popUpText = _popUp.transform.Find("PopUpText").GetComponent<TextMeshProUGUI>();
         _cameraAnimator = GameObject.Find("Player").transform.Find("Main Camera").GetComponent<Animator>();
+        _winSpot = GameObject.Find("WinSpot");
+        _winSpot.SetActive(false);
     }
 
-    // Update is called once per frame
+    //Controls the game's actions based on the state it's in 
     public void Update()
     {
         //Checks what state the game is currently in and updates it 
@@ -108,6 +109,11 @@ public class GameFlow : MonoBehaviour
                 throw new ArgumentOutOfRangeException();
         }
     }
+    
+    //==================================================================================================================
+    // Transition Functions 
+    //==================================================================================================================
+
 
     //Starts the game by fading from dark and starting the conversation 
     private IEnumerator StartGame()
@@ -124,6 +130,7 @@ public class GameFlow : MonoBehaviour
         _gameCanvas.SetActive(true);
     }
 
+    //Start the end game sequence where the player gets to see the level then ends it after timer 
     public void EndGame()
     {
         _currentState = GameState.End;
@@ -132,31 +139,33 @@ public class GameFlow : MonoBehaviour
         StartCoroutine(End());
     }
 
+    //Ends the game and goes to the next scene 
     private static IEnumerator End()
     {
         yield return new WaitForSeconds(15.1f);
         SceneManager.LoadScene($"Credits");
     }
     
-    //Start the talking section 
-    public void EnterDialogue(string[] sentences, Sprite sprite)
+    //Starts the conversion w
+    public void EnterDialogue(string[] lines)
     {
-        _talkController.LoadText(sentences, sprite);
+        //Updates UI
         _gameCanvas.SetActive(false);
         _talkController.SetCanvas(true);
+        
+        //Loads the data and starts the conversation 
+        _talkController.LoadText(lines);
         _talkController.NextSentence();
         _currentState = GameState.TalkTime;
     }
 
-    private void EnterDialogue(string[] sentences)
-    {
-        _talkController.LoadText(sentences);
-        _gameCanvas.SetActive(false);
-        _talkController.SetCanvas(true);
-        _talkController.NextSentence();
-        _currentState = GameState.TalkTime;
-    }
+    
+    //==================================================================================================================
+    // Quest Functions 
+    //==================================================================================================================
 
+    //Takes in the quest type and using the Data it increments whatever was done, prints out a statement 
+    //for the player to update them on the progress and check if the quest was completed 
     public void AddQuest(Quests quests)
     {
         _scores[(int) quests]++;
@@ -170,6 +179,7 @@ public class GameFlow : MonoBehaviour
         if (quests == Quests.BirdSeed) { nonPlayableCharacters[(int) Quests.BirdSeed2].QuestComplete(); }
     }
     
+    //Update count of completed quests if all 7 are finished the end goal opens up
     private void WinCounter()
     {
         winCounter++;
@@ -178,11 +188,12 @@ public class GameFlow : MonoBehaviour
         EnterDialogue(sentences);
     }
     
+    //Determines what the pop up will say and how long the pop up will remain on screen 
     private IEnumerator PopUp(string text)
     {
         _popUpText.text = text;
         _popUp.SetActive(true);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
         _popUp.SetActive(false);
     }
 
