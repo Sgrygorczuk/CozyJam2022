@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ba2e0a029a5c5c24eaee5f84644f2162
+guid: 807e51892dc9de5fbbb44b4a98a375d7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -139,7 +139,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Leaf_Farmer_0
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1015
+        width: 830
+        height: 991
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff757c7cc24444501af3518ae2331da1
+      internalID: 712180324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -150,7 +171,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Leaf_Farmer_0: 712180324
+      Leaf_Farmer_2: -1212918169
+      Leaf_Farmer_1: -482956712
+      Leaf_Farmer_3: 1872453574
+      Leaf_Farmer_4: 637839649
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

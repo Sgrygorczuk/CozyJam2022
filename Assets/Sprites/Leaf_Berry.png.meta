@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ba2e0a029a5c5c24eaee5f84644f2162
+guid: 278edb1a48dfd65bf90f726e0a607df1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -139,7 +139,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Leaf_Berry_0
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1015
+        width: 843
+        height: 991
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a35446c133b3273a30d5e6cf762c56
+      internalID: 230480855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -150,7 +171,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Leaf_Berry_3: -1813586972
+      Leaf_Berry_0: 230480855
+      Leaf_Berry_1: -248868347
+      Leaf_Berry_4: -854204648
+      Leaf_Berry_5: -258846562
+      Leaf_Berry_2: 1180163829
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

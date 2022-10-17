@@ -31,7 +31,7 @@ public class NPC : GenericObject
     
     //========= Game Controls 
     [Header("NPC Controls")]
-    private bool _questComplete;                                    //Tells us if the quest is complete 
+    [SerializeField] private bool _questComplete;                                    //Tells us if the quest is complete 
     private GameFlow _gameFlow;                                     //Connect to Game Flow for update on quest 
     [SerializeField] private bool isQuestGiver;                     //Tells us if this NPC is a quest giver 
     

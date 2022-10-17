@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2dadf64-861e-499d-a5d7-805fb06aa3a0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/ParticleEffect/Leaf.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ParticleEffect/Leaf.mat.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CozyJam2022/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CozyJam2022/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/RumRaisin-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/RumRaisin-Regular SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Credits.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Credits.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameFlow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameFlow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/NPC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/NPC.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Map.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Map.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Map.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Map.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,6 +107,7 @@
       <workItem from="1663898395763" duration="647000" />
       <workItem from="1664378790594" duration="20256000" />
       <workItem from="1664409716434" duration="1477000" />
+      <workItem from="1666020519479" duration="1754000" />
     </task>
     <servers />
   </component>

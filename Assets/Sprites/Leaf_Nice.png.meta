@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ba2e0a029a5c5c24eaee5f84644f2162
+guid: 86651e636ce68981c86417b45ea7e73e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -139,7 +139,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Leaf_Nice_0
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1999
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83f68e53b5bc71a0a99ccba67566521
+      internalID: -1242067254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf_Nice_1
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 1999
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16d52b76e520bf39aeba70f50806a15
+      internalID: 1759104298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf_Nice_2
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1015
+        width: 847
+        height: 978
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b11a664046b274ab3b54def9ba09a6ef
+      internalID: -813909897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf_Nice_3
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1986
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408953fcd869aac46b48999b6e4bcd31
+      internalID: -1605169583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -150,7 +234,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Leaf_Nice_1: 1759104298
+      Leaf_Nice_2: -813909897
+      Leaf_Nice_4: -1720190060
+      Leaf_Nice_6: 278105208
+      Leaf_Nice_5: 521428895
+      Leaf_Nice_7: 357975512
+      Leaf_Nice_0: -1242067254
+      Leaf_Nice_3: -1605169583
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

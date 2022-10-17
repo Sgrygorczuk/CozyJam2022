@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ba2e0a029a5c5c24eaee5f84644f2162
+guid: 4f2201fde89852400aee5a5c32d0c15d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -139,7 +139,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Leaf_Scared_0
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1015
+        width: 876
+        height: 991
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7527db28bcad6c13b7acaa74e7346b4
+      internalID: 601561753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -150,7 +171,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Leaf_Scared_2: -1623651592
+      Leaf_Scared_1: 152113565
+      Leaf_Scared_0: 601561753
+      Leaf_Scared_3: -1718572326
+      Leaf_Scared_4: -1283132248
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
